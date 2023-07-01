@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/phonebook--RTK-Query/static/css/main.3c225b2c.css",
+    "main.js": "/phonebook--RTK-Query/static/js/main.f2fb56f3.js",
+    "index.html": "/phonebook--RTK-Query/index.html",
+    "main.3c225b2c.css.map": "/phonebook--RTK-Query/static/css/main.3c225b2c.css.map",
+    "main.f2fb56f3.js.map": "/phonebook--RTK-Query/static/js/main.f2fb56f3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3c225b2c.css",
+    "static/js/main.f2fb56f3.js"
+  ]
+}
