@@ -1,11 +1,13 @@
-import { useGetFetchContactsQuery } from 'redux/contactSlice';
+import {
+  useAddContactMutation,
+  useGetFetchContactsQuery,
+} from 'redux/contactSlice';
+
 import css from './ContactForm.module.css';
 
 export const ContactForm = () => {
-  // const dispatch = useDispatch();
-  // const { items } = useSelector(getContacts);
   const { data } = useGetFetchContactsQuery();
-  console.log(data);
+  const [addContact] = useAddContactMutation();
 
   const handleFormSubmit = event => {
     event.preventDefault();
@@ -22,12 +24,15 @@ export const ContactForm = () => {
       return;
     }
 
-    // dispatch(
-    //   addContactThunk({
-    //     name: form.elements.name.value,
-    //     phone: form.elements.number.value,
-    //   })
-    // );
+    addContact({
+      name: form.elements.name.value,
+      phone: form.elements.number.value,
+    });
+    // useAddContactMutation({
+    //   name: form.elements.name.value,
+    //   phone: form.elements.number.value,
+    // });
+
     form.reset();
   };
 

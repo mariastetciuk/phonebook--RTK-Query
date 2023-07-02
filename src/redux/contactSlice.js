@@ -11,10 +11,18 @@ export const contactApi = createApi({
       query: () => `/contacts`,
       providesTags: ['Contacts'],
     }),
+    addContact: builder.mutation({
+      query: value => ({
+        url: `/contacts`,
+        method: 'POST',
+        body: value,
+      }),
+      invalidatesTags: ['Contacts'],
+    }),
   }),
 });
 
-export const { useGetFetchContactsQuery } = contactApi;
+export const { useGetFetchContactsQuery, useAddContactMutation } = contactApi;
 
 // import { createSlice } from '@reduxjs/toolkit';
 // import {
