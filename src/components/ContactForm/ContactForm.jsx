@@ -1,4 +1,4 @@
-import { useGetFetchContactsQuery } from 'redux/getFetchAllContactsThunk';
+import { useGetFetchContactsQuery } from 'redux/contactSlice';
 import css from './ContactForm.module.css';
 
 export const ContactForm = () => {

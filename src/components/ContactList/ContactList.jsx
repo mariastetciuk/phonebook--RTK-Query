@@ -1,5 +1,5 @@
 import css from './ContactList.module.css';
-import { useGetFetchContactsQuery } from 'redux/getFetchAllContactsThunk';
+import { useGetFetchContactsQuery } from 'redux/contactSlice';
 import { useSelector } from 'react-redux';
 import { getFilterValue } from 'redux/selectors';
 
